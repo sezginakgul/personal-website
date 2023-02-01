@@ -97,8 +97,8 @@
 .social i {
   font-size: 30px;
   text-decoration: none;
-  color: black;
   transition: all 0.4s ease-in-out;
+  color: black;
 }
 
 .social i:hover {

@@ -1,6 +1,6 @@
 .p {
   width: 30%;
-  height: 30vh;
+  height: 25vh;
   margin: 20px 10px;
   border: 2px solid rgb(243, 242, 242);
   border-radius: 10px 10px 0px 0px;
@@ -40,12 +40,11 @@
   width: 100%;
   transition: all 0.5s ease-in-out;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   filter: grayscale(0.7);
 }
 
 .p:hover .p-img {
-  /* transform: translateY(-100%); */
   transform: scale(108%);
   filter: grayscale(0);
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./intro.css";
 import Me from "../../img/me.png";
 
-const Intro = () => {
+const Intro = ({ darkMode }) => {
   return (
     <div className="i">
       <div className="i-left">
@@ -26,21 +26,32 @@ const Intro = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i
+                class="fa-brands fa-linkedin-in"
+                style={{ color: darkMode && "#005c53" }}
+              ></i>
             </a>
             <a
               href="https://github.com/sezginakgul"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-github"></i>
+              <i
+                class="fa-brands fa-github"
+                style={{ color: darkMode && "#005c53" }}
+              ></i>
             </a>
             <a
               href=" https://wa.me/+905346158014"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-whatsapp"></i>
+              <i
+                class="fa-brands fa-whatsapp"
+                style={{
+                  color: darkMode && "#005c53",
+                }}
+              ></i>
             </a>
           </div>
         </div>

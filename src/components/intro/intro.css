@@ -88,3 +88,19 @@
   top: 0;
   right: 0;
 }
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+
+.social i {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  transition: all 0.4s ease-in-out;
+}
+
+.social i:hover {
+  color: #005c53;
+}

@@ -20,6 +20,29 @@ const Intro = () => {
             I develop services for customers of all sizes, specializing inreting
             stylish,modern websites, web services and online stores.
           </p>
+          <div className="social">
+            <a
+              href="https://www.linkedin.com/in/sezginakgul/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/sezginakgul"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href=" https://wa.me/+905346158014"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
         </div>
         <svg
           width="75"

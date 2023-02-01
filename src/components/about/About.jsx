@@ -17,14 +17,20 @@ const About = () => {
       <div className="a-right">
         <h1 className="a-title">About Me</h1>
         <p className="a-sub">
-          It is a long established fact that a reader will be distracted by the
-          readable content.
-        </p>
-        <p className="a-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat duis aute irure dolor in reprehende.
+          Having 4+ years experienced in IT and 1+ an expert front-end
+          developer, interested in writing codes, skilled at developing complex
+          solutions, creating responsive designs, possessing strong creative
+          thinking skills, high energy and integrity.
+          <br />
+          Ability to create algorithms effectively, and interact positively and
+          communicate appropriately with team members. Quickly grasp new
+          technologies and concepts to develop innovative and creative solutions
+          to problems.
+          <br />
+          Always eager to learn various technologies, tools and libraries.
+          Especially interested in the
+          <b>Frontend / Web Development, HTML, CSS, JS, React</b>. Excited to
+          learn new things and improve, lifetime student.
         </p>
       </div>
     </div>

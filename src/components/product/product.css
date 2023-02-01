@@ -1,6 +1,6 @@
 .p {
   width: 30%;
-  height: 40vh;
+  height: 30vh;
   margin: 20px 10px;
   border: 2px solid rgb(243, 242, 242);
   border-radius: 10px 10px 0px 0px;
@@ -17,20 +17,35 @@
 }
 
 .p-circle {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   margin: 3px;
   background-color: white;
 }
 
+.p-circle:nth-child(1) {
+  background-color: #fa625c;
+}
+
+.p-circle:nth-child(2) {
+  background-color: #fbb43a;
+}
+
+.p-circle:nth-child(3) {
+  background-color: #3ec544;
+}
+
 .p-img {
   width: 100%;
-  transition: all 2s ease-in-out;
+  transition: all 0.5s ease-in-out;
   height: 100%;
   object-fit: contain;
+  filter: grayscale(0.7);
 }
 
 .p:hover .p-img {
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
+  transform: scale(108%);
+  filter: grayscale(0);
 }

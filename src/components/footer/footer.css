@@ -1,8 +1,6 @@
 .footer {
   text-align: center;
   padding: 1rem 0;
-  background-color: #042940;
-  border-top: 4px solid #005c53;
-  font-weight: 300;
-  color: white;
+  background-color: rgb(243, 242, 242);
+  font-weight: 500;
 }

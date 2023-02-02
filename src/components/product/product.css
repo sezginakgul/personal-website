@@ -48,3 +48,17 @@
   transform: scale(108%);
   filter: grayscale(0);
 }
+
+@media screen and (max-width: 576px) {
+  .p {
+    width: 45%;
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .p {
+    width: 35%;
+    height: 25vh;
+  }
+}

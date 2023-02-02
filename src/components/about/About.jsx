@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css";
+import AboutGif from "../../img/about.gif";
 
 const About = () => {
   return (
@@ -7,11 +8,7 @@ const About = () => {
       <div className="a-left">
         <div className="a-card bg"></div>
         <div className="a-card">
-          <img
-            src="https://images.pexels.com/photos/14504381/pexels-photo-14504381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt=""
-            className="a-img"
-          />
+          <img src={AboutGif} alt="" className="a-img" />
         </div>
       </div>
       <div className="a-right">
@@ -29,7 +26,7 @@ const About = () => {
           <br />
           Always eager to learn various technologies, tools and libraries.
           Especially interested in the
-          <b>Frontend / Web Development, HTML, CSS, JS, React</b>. Excited to
+          <b> Frontend / Web Development, HTML, CSS, JS, React</b>. Excited to
           learn new things and improve, lifetime student.
         </p>
       </div>

@@ -31,6 +31,7 @@
 .i-name {
   font-size: 60px;
 }
+
 .i-title {
   height: 50px;
   overflow: hidden;
@@ -45,6 +46,7 @@
   50% {
     transform: translateY(-50px);
   }
+
   100% {
     transform: translateY(-100px);
   }
@@ -103,4 +105,30 @@
 
 .social i:hover {
   color: #005c53;
+}
+
+@media screen and (max-width: 576px) {
+  .i {
+    flex-direction: column;
+  }
+
+  .i-left-wrapper {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  .i-desc {
+    display: none;
+  }
+
+  .social {
+    padding-top: 10px;
+  }
+
+  .i-img {
+    height: 100%;
+  }
 }

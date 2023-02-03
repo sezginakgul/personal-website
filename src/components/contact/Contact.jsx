@@ -1,10 +1,14 @@
 import { useRef, useState } from "react";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
+import {
+  SendEmailToastDark,
+  SendEmailToastLight,
+} from "../../utils/customToastify";
 
 const Contact = ({ darkMode }) => {
   const formRef = useRef();
-  const [done, setDone] = useState(false);
+  // const [done, setDone] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +22,12 @@ const Contact = ({ darkMode }) => {
       .then(
         (result) => {
           console.log(result.text);
-          setDone(true);
+          // setDone(true);
+          {
+            darkMode
+              ? SendEmailToastDark("Email Send Successfuly")
+              : SendEmailToastLight("Email Send Successfuly");
+          }
         },
         (error) => {
           console.log(error.text);
@@ -88,7 +97,6 @@ const Contact = ({ darkMode }) => {
             />
             <button type="submit">Submit</button>
           </form>
-          {done && "Thank you... "}
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
@@ -25,6 +26,7 @@ function App() {
       <ProductList />
       <Contact darkMode={darkMode} />
       <Footer darkMode={darkMode} />
+      <ToastContainer />
     </div>
   );
 }

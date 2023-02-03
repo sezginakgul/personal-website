@@ -8,8 +8,15 @@ import Intro from "./components/intro/Intro";
 import ProductList from "./components/productList/ProductList";
 import Toggle from "./components/toggle/Toggle";
 import { ThemeContext } from "./context";
+import ReactGA from "react-ga";
+
+function initialGA() {
+  ReactGA.initialize("G-CVCQGWZHLY");
+  ReactGA.pageview("homePage");
+}
 
 function App() {
+  initialGA();
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 

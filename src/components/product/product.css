@@ -51,14 +51,14 @@
 
 @media screen and (max-width: 576px) {
   .p {
-    width: 45%;
-    height: 20vh;
+    width: 90%;
+    margin: 20px auto;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 800px) {
   .p {
-    width: 35%;
-    height: 25vh;
+    width: 45%;
+    margin: 20px auto;
   }
 }

@@ -1,13 +1,28 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 import {
+  ErrorEmailToastDark,
+  ErrorEmailToastLight,
   SendEmailToastDark,
   SendEmailToastLight,
 } from "../../utils/customToastify";
 
 const Contact = ({ darkMode }) => {
+  const initialState = {
+    user_name: "",
+    user_subject: "",
+    user_email: "",
+    user_message: "",
+  };
   const formRef = useRef();
+  const [form, setForm] = useState(initialState);
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,15 +35,19 @@ const Contact = ({ darkMode }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           {
             darkMode
               ? SendEmailToastDark("Email Send Successfuly")
               : SendEmailToastLight("Email Send Successfuly");
           }
+          setForm(initialState);
         },
         (error) => {
-          console.log(error.text);
+          {
+            darkMode
+              ? ErrorEmailToastDark(error.text)
+              : ErrorEmailToastLight(error.text);
+          }
         }
       );
   };
@@ -41,7 +60,7 @@ const Contact = ({ darkMode }) => {
           <h1 className="c-title">Let's discuss your project</h1>
           <div className="c-info">
             <div className="c-info-item">
-              <i class="fa-solid fa-envelope c-icon fa-lg"></i>
+              <i className="fa-solid fa-envelope c-icon fa-lg"></i>
               sezgin.akgull@gmail.com
             </div>
           </div>
@@ -60,6 +79,8 @@ const Contact = ({ darkMode }) => {
               type="text"
               placeholder="Name"
               name="user_name"
+              value={form?.user_name || ""}
+              onChange={handleChange}
               required
             />
             <input
@@ -70,6 +91,8 @@ const Contact = ({ darkMode }) => {
               type="text"
               placeholder="Subject"
               name="user_subject"
+              value={form?.user_subject}
+              onChange={handleChange}
               required
             />
             <input
@@ -80,6 +103,8 @@ const Contact = ({ darkMode }) => {
               type="email"
               placeholder="Email"
               name="user_email"
+              value={form?.user_email}
+              onChange={handleChange}
               required
             />
             <textarea
@@ -91,6 +116,8 @@ const Contact = ({ darkMode }) => {
               rows="5"
               placeholder="Message"
               name="user_message"
+              value={form?.user_message}
+              onChange={handleChange}
               required
             />
             <button type="submit">Submit</button>

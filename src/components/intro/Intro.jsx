@@ -27,7 +27,7 @@ const Intro = ({ darkMode }) => {
               rel="noreferrer"
             >
               <i
-                class="fa-brands fa-linkedin-in"
+                className="fa-brands fa-linkedin-in"
                 style={{ color: darkMode && "#005c53" }}
               ></i>
             </a>
@@ -37,7 +37,7 @@ const Intro = ({ darkMode }) => {
               rel="noreferrer"
             >
               <i
-                class="fa-brands fa-github"
+                className="fa-brands fa-github"
                 style={{ color: darkMode && "#005c53" }}
               ></i>
             </a>
@@ -47,7 +47,7 @@ const Intro = ({ darkMode }) => {
               rel="noreferrer"
             >
               <i
-                class="fa-brands fa-whatsapp"
+                className="fa-brands fa-whatsapp"
                 style={{
                   color: darkMode && "#005c53",
                 }}

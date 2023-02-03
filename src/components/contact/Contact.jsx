@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 import {
@@ -8,7 +8,6 @@ import {
 
 const Contact = ({ darkMode }) => {
   const formRef = useRef();
-  // const [done, setDone] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +21,6 @@ const Contact = ({ darkMode }) => {
       .then(
         (result) => {
           console.log(result.text);
-          // setDone(true);
           {
             darkMode
               ? SendEmailToastDark("Email Send Successfuly")

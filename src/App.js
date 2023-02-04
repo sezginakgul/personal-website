@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 import About from "./components/about/About";
@@ -10,13 +10,14 @@ import Toggle from "./components/toggle/Toggle";
 import { ThemeContext } from "./context";
 import ReactGA from "react-ga";
 
-function initialGA() {
-  ReactGA.initialize("G-CVCQGWZHLY");
-  ReactGA.pageview("homePage");
-}
+const TRACKING_ID = "UA-256284064-1";
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
-  initialGA();
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 

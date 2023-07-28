@@ -10,7 +10,7 @@ import Toggle from "./components/toggle/Toggle";
 import { ThemeContext } from "./context";
 import ReactGA from "react-ga";
 
-const TRACKING_ID = "UA-256284064-1";
+const TRACKING_ID = "G-V28WTFPK7G";
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
